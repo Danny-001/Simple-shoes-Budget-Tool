@@ -14,10 +14,10 @@ class Shoes:
     def purchase(self, budget):
         self.budget_check(budget)  # Validate budget input
 
-        if budget >= self.price:  # Check if budget is sufficient
-            print(f"Thank you for purchasing {self.name}!")
+        if budget < self.price:  # Insufficient budget case
+            print(f"You do not have enough money to buy {self.name}.")
 
-        if budget == self.price:  # Exact budget case
+        elif budget == self.price:  # Exact budget case
             print("You have the exact amount of money to buy shoes, therefore, no change.")  
 
         else:  # Budget exceeds price case
